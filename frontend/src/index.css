@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Marcellus&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0d0d11;
+  --color-panel: #17171d;
+  --color-parchment: #eee8d9;
+  --color-muted: #9c98a0;
+  --color-gold: #d3b16b;
+  --color-violet: #b49ad1;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Marcellus", Georgia, serif;
+}
+
+:root {
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  color: #eee8d9;
+  background: #0d0d11;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid #d3b16b; outline-offset: 3px; }
+::selection { color: #0d0d11; background: #d3b16b; }
+
+.font-display { font-family: "Marcellus", Georgia, serif; }
+.panel { @apply rounded-2xl border border-white/[.07] bg-panel p-5 sm:p-6; }
+.section-eyebrow { @apply text-[10px] font-semibold uppercase tracking-[.2em] text-gold/80; }
+.form-input { @apply block w-full rounded-xl border border-white/10 bg-[#111116] px-4 py-3 text-sm text-parchment placeholder:text-muted/45 transition-colors; }
+.form-input:hover { @apply border-white/20; }
+.form-input:focus { @apply border-gold/50 outline-none ring-2 ring-gold/10; }
+.gold-button { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-gold px-4 py-3 text-sm font-semibold text-[#1a1710] transition hover:bg-[#e0c17c] disabled:cursor-not-allowed disabled:opacity-60; }
+.secondary-button { @apply inline-flex min-h-9 items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/[.025] px-3 py-2 text-xs font-medium text-parchment transition hover:border-gold/30 hover:bg-gold/[.06] disabled:cursor-wait disabled:opacity-60; }
+.icon-button { @apply grid size-9 shrink-0 place-items-center rounded-lg border border-white/[.08] text-muted transition hover:border-gold/25 hover:bg-gold/[.05] hover:text-parchment; }

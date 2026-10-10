@@ -1,0 +1,26 @@
+# Local secrets and environment settings
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.*.example
+
+# Dependencies and generated output
+**/node_modules/
+**/dist/
+**/build/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage
+**/htmlcov/
+
+# Local/editor files
+**/*.log
+**/.DS_Store
+**/Thumbs.db
+**/.vscode/
+**/.idea/
